@@ -1,35 +1,31 @@
---SELECT *
---FROM AddressBook
---;
-
---‰‰K‚P
---“¾ˆÓæƒ}ƒXƒ^‚©‚ç“¾ˆÓæƒR[ƒhA“¾ˆÓæ–¼‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼‘
+--å¾—æ„å…ˆãƒžã‚¹ã‚¿ã‹ã‚‰å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰ã€å¾—æ„å…ˆåã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT T_CODE, T_NAME
 FROM TOKUI_M
 ;
 
---‰‰K‚Q
---¤•iƒ}ƒXƒ^‚Ì‘S€–Ú‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼’
+--å•†å“ãƒžã‚¹ã‚¿ã®å…¨é …ç›®ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT *
 FROM SHOHIN_M
 ;
 
---‰‰K‚R
---“¾ˆÓæƒ}ƒXƒ^‚©‚ç“¾ˆÓæƒR[ƒh‚ª¢1010£‚Ì“¾ˆÓæƒR[ƒhA“¾ˆÓæ–¼‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼“
+--å¾—æ„å…ˆãƒžã‚¹ã‚¿ã‹ã‚‰å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰ãŒï½¢1010ï½£ã®å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰ã€å¾—æ„å…ˆåã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT T_CODE, T_NAME
 FROM TOKUI_M
 WHERE T_CODE = 1010
 ;
 
---‰‰K‚S
---¤•iƒ}ƒXƒ^‚©‚ç”„ã’P‰¿‚ª1,000‰~ˆÈã‚Ì¤•iƒR[ƒhA¤•i–¼A”„ã’P‰¿‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼”
+--å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰å£²ä¸Šå˜ä¾¡ãŒ1,000å††ä»¥ä¸Šã®å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“åã€å£²ä¸Šå˜ä¾¡ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT S_CODE, S_NAME, S_TANKA
 FROM SHOHIN_M
 WHERE S_TANKA >= 1000
 ;
 
---‰‰K‚Tš
---”„ãƒwƒbƒ_[‚©‚ç”„ã”NŒŽ“ú‚ª‚P‚X‚X‚U”N‚Å‚Í‚È‚¢”„ã‚É‚Â‚¢‚Ä‘S€–Ú‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼•â˜…
+--å£²ä¸Šãƒ˜ãƒƒãƒ€ãƒ¼ã‹ã‚‰å£²ä¸Šå¹´æœˆæ—¥ãŒï¼‘ï¼™ï¼™ï¼–å¹´ã§ã¯ãªã„å£²ä¸Šã«ã¤ã„ã¦å…¨é …ç›®ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT *
 FROM URIAGE_H
 WHERE UH_DATE not between 19960000 and 19969999
@@ -40,145 +36,144 @@ FROM URIAGE_H
 WHERE LEFT(UH_DATE, 4) != 1996
 ;
 
---‰‰K‚Uš
---¤•iƒ}ƒXƒ^‚©‚ç”„ã’P‰¿‚ª1,000‰~ˆÈã2,000‰~ˆÈ‰º‚Ì¤•i‚Ì‘S€–Ú‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼–â˜…
+--å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰å£²ä¸Šå˜ä¾¡ãŒ1,000å††ä»¥ä¸Š2,000å††ä»¥ä¸‹ã®å•†å“ã®å…¨é …ç›®ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT *
 FROM SHOHIN_M
 WHERE S_TANKA between 1000 and 2000
 ;
 
---‰‰K‚Vš
---¤•iƒ}ƒXƒ^‚©‚ç¤•iƒR[ƒh‚ªu1001v‚©u1003v‚Ì¤•i‚É‚Â‚¢‚Ä‘S€–Ú‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼—â˜…
+--å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰å•†å“ã‚³ãƒ¼ãƒ‰ãŒã€Œ1001ã€ã‹ã€Œ1003ã€ã®å•†å“ã«ã¤ã„ã¦å…¨é …ç›®ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT *
 FROM SHOHIN_M
 WHERE S_CODE = 1001 OR S_CODE = 1003
 ;
 
---‰‰K‚Wš
---“¾ˆÓæƒ}ƒXƒ^‚©‚ç“¾ˆÓæ–¼‚ÉuŽð“Xv‚ª‚Â‚­“¾ˆÓæ‚Ì“¾ˆÓæƒR[ƒhA“¾ˆÓæ–¼‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼˜â˜…
+--å¾—æ„å…ˆãƒžã‚¹ã‚¿ã‹ã‚‰å¾—æ„å…ˆåã«ã€Œé…’åº—ã€ãŒã¤ãå¾—æ„å…ˆã®å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰ã€å¾—æ„å…ˆåã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT T_CODE, T_NAME
 FROM TOKUI_M
-WHERE T_NAME LIKE '%Žð“X%'
+WHERE T_NAME LIKE '%é…’åº—%'
 ;
 
---‰‰K‚Xš
---“¾ˆÓæƒ}ƒXƒ^‚©‚çZŠ‚P‚ªu‘å“c‹æv‚Å‚Í‚¶‚Ü‚é“¾ˆÓæ‚Ì“¾ˆÓæƒR[ƒhA“¾ˆÓæ–¼‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼™â˜…
+--å¾—æ„å…ˆãƒžã‚¹ã‚¿ã‹ã‚‰ä½æ‰€ï¼‘ãŒã€Œå¤§ç”°åŒºã€ã§ã¯ã˜ã¾ã‚‹å¾—æ„å…ˆã®å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰ã€å¾—æ„å…ˆåã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT T_CODE, T_NAME
 FROM TOKUI_M
-WHERE T_ADD1 LIKE '‘å“c‹æ%'
+WHERE T_ADD1 LIKE 'å¤§ç”°åŒº%'
 ;
 
---‰‰K‚P‚O
---¤•iƒ}ƒXƒ^‚©‚çŠe¤•i‚Ì¤•i–¼‚Æ’P‰¿‘e—˜‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B i’P‰¿‘e—˜  ”„ã’P‰¿ | Œ´’P‰¿j
-SELECT S_NAME, S_TANKA - S_GENTAN AS '’P‰¿‘e—˜'
+--æ¼”ç¿’ï¼‘ï¼
+--å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰å„å•†å“ã®å•†å“åã¨å˜ä¾¡ç²—åˆ©ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚ ï¼ˆå˜ä¾¡ç²—åˆ© ï¼ å£²ä¸Šå˜ä¾¡ ï¼ åŽŸå˜ä¾¡ï¼‰
+SELECT S_NAME, S_TANKA - S_GENTAN AS 'å˜ä¾¡ç²—åˆ©'
 FROM SHOHIN_M
 ;
 
---‰‰K‚P‚P
---¤•iƒ}ƒXƒ^‚©‚ç”„ã’P‰¿‚Ì‚PŠ„‘‚µ‚ª1,000‰~‚ð’´‚¦‚é¤•i–¼‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼‘ï¼‘
+--å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰å£²ä¸Šå˜ä¾¡ã®ï¼‘å‰²å¢—ã—ãŒ1,000å††ã‚’è¶…ãˆã‚‹å•†å“åã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT S_NAME
 FROM SHOHIN_M
 WHERE S_TANKA *1.1 > 1000
 ;
 
---‰‰K‚P‚Q
---“¾ˆÓæƒ}ƒXƒ^‚©‚çZŠ‚P‚ªu‘å“c‹æv‚©‚ç‚Í‚¶‚Ü‚é“¾ˆÓæ‚É‚Â‚¢‚Ä—X•Ö”Ô†¸‡‚É‘S€–Ú‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼‘ï¼’
+--å¾—æ„å…ˆãƒžã‚¹ã‚¿ã‹ã‚‰ä½æ‰€ï¼‘ãŒã€Œå¤§ç”°åŒºã€ã‹ã‚‰ã¯ã˜ã¾ã‚‹å¾—æ„å…ˆã«ã¤ã„ã¦éƒµä¾¿ç•ªå·æ˜‡é †ã«å…¨é …ç›®ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT *
 FROM TOKUI_M
-WHERE T_ADD1 LIKE '‘å“c‹æ%'
+WHERE T_ADD1 LIKE 'å¤§ç”°åŒº%'
 ORDER BY T_YUBIN ASC
 ;
 
---‰‰K‚P‚R
---¤•iƒ}ƒXƒ^‚©‚ç”„ã’P‰¿‚ª‚‚¢‡‚ÉA‚Ü‚½“¯‚¶’P‰¿‚Ìê‡‚Í¤•iƒR[ƒh‚ª¬‚³‚¢‡‚É‘S€–Ú‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼‘ï¼“
+--å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰å£²ä¸Šå˜ä¾¡ãŒé«˜ã„é †ã«ã€ã¾ãŸåŒã˜å˜ä¾¡ã®å ´åˆã¯å•†å“ã‚³ãƒ¼ãƒ‰ãŒå°ã•ã„é †ã«å…¨é …ç›®ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT * 
 FROM SHOHIN_M
 ORDER BY S_TANKA DESC, S_CODE ASC
 ;
 
---‰‰K‚P‚S
---¤•iƒ}ƒXƒ^‚©‚ç‘S¤•i‚Ì•½‹Ï”„ã’P‰¿‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
-SELECT AVG(S_TANKA) AS '‘S¤•i‚Ì•½‹Ï”„ã’P‰¿'
+--æ¼”ç¿’ï¼‘ï¼”
+--å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰å…¨å•†å“ã®å¹³å‡å£²ä¸Šå˜ä¾¡ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
+SELECT AVG(S_TANKA) AS 'å…¨å•†å“ã®å¹³å‡å£²ä¸Šå˜ä¾¡'
 FROM SHOHIN_M
 ;
 
---‰‰K‚P‚T
---”„ãƒwƒbƒ_[‚Ì”„ã‡Œv‹àŠz‚ª1–œ‰~‚ð’´‚¦‚éŒ”‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
-SELECT count(*)
+--æ¼”ç¿’ï¼‘ï¼•
+--å£²ä¸Šãƒ˜ãƒƒãƒ€ãƒ¼ã®å£²ä¸Šåˆè¨ˆé‡‘é¡ãŒ1ä¸‡å††ã‚’è¶…ãˆã‚‹ä»¶æ•°ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
+SELECT COUNT(*)
 FROM URIAGE_H
 WHERE UH_GOKEI > 10000
 ;
 
---‰‰K‚P‚U
---”„ãƒwƒbƒ_[‚©‚ç“¾ˆÓæƒR[ƒh–ˆ‚Ì‡Œv‹àŠz‚ð“¾ˆÓæƒR[ƒh‡‚ÉŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼‘ï¼–
+--å£²ä¸Šãƒ˜ãƒƒãƒ€ãƒ¼ã‹ã‚‰å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰æ¯Žã®åˆè¨ˆé‡‘é¡ã‚’å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰é †ã«æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT UH_TCODE, SUM(UH_GOKEI)
 FROM URIAGE_H
 Group BY UH_TCODE
 ORDER BY UH_TCODE
 ;
 
---‰‰K‚P‚V
---”„ã–¾×‚©‚ç¤•iƒR[ƒh–ˆ‚Ì”—Ê‡Œv‚Æ¤•iƒR[ƒh‚ð”—Ê‚Ì‘½‚¢‡‚ÉŒŸõ‚µ‚Ä‰º‚³‚¢B
-select UM_SCODE, sum(UM_SU)
-from URIAGE_M
-group by UM_SCODE
-order by sum(UM_SU) desc
+--æ¼”ç¿’ï¼‘ï¼—
+--å£²ä¸Šæ˜Žç´°ã‹ã‚‰å•†å“ã‚³ãƒ¼ãƒ‰æ¯Žã®æ•°é‡åˆè¨ˆã¨å•†å“ã‚³ãƒ¼ãƒ‰ã‚’æ•°é‡ã®å¤šã„é †ã«æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
+SELECT UM_SCODE, sum(UM_SU)
+FROM URIAGE_M
+GROUP BY UM_SCODE
+ORDER BY sum(UM_SU) desc
 ;
 
---‰‰K‚P‚W
---”„ã–¾×‚Æ¤•iƒ}ƒXƒ^‚©‚ç¤•iƒR[ƒhA¤•i–¼A”„ã‹àŠz‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
---‚½‚¾‚µA”„ã–¾×‚É‚È‚¢¤•i‚É‚Â‚¢‚Ä‚à¤•iƒR[ƒhA¤•i–¼‚ð•\Ž¦‚µ‚Ä‰º‚³‚¢B
-select SHOHIN_M.S_CODE, SHOHIN_M.S_NAME, URIAGE_M.UM_URIKIN --¤•iƒR[ƒhA¤•i–¼A”„ã‹àŠz
-from URIAGE_M
-right join SHOHIN_M
-on URIAGE_M.UM_SCODE = SHOHIN_M.S_CODE
-order by SHOHIN_M.S_CODE
+--æ¼”ç¿’ï¼‘ï¼˜
+--å£²ä¸Šæ˜Žç´°ã¨å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“åã€å£²ä¸Šé‡‘é¡ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
+--ãŸã ã—ã€å£²ä¸Šæ˜Žç´°ã«ãªã„å•†å“ã«ã¤ã„ã¦ã‚‚å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“åã‚’è¡¨ç¤ºã—ã¦ä¸‹ã•ã„ã€‚
+SELECT SHOHIN_M.S_CODE, SHOHIN_M.S_NAME, URIAGE_M.UM_URIKIN --å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“åã€å£²ä¸Šé‡‘é¡
+FROM URIAGE_M
+RIGHT OUTER JOIN SHOHIN_M
+ON URIAGE_M.UM_SCODE = SHOHIN_M.S_CODE
+ORDER BY SHOHIN_M.S_CODE
 ;
 
---‰‰K‚P‚Xš
---”„ã–¾×‚Æ¤•iƒ}ƒXƒ^‚©‚ç¤•iƒR[ƒh–ˆ‚É¤•iƒR[ƒhA¤•i–¼, ”„ã”—Ê‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
---‚½‚¾‚µA”„ã–¾×‚É‚È‚¢¤•i‚É‚Â‚¢‚Ä‚Í¤•iƒR[ƒhA¤•i–¼‚ð•\Ž¦‚µ‚È‚¢‚Å‰º‚³‚¢B
-select UM_SCODE, SHOHIN_M.S_NAME, SUM(UM_SU)
-from URIAGE_M
+--æ¼”ç¿’ï¼‘ï¼™â˜…
+--å£²ä¸Šæ˜Žç´°ã¨å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰å•†å“ã‚³ãƒ¼ãƒ‰æ¯Žã«å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“å, å£²ä¸Šæ•°é‡ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
+--ãŸã ã—ã€å£²ä¸Šæ˜Žç´°ã«ãªã„å•†å“ã«ã¤ã„ã¦ã¯å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“åã‚’è¡¨ç¤ºã—ãªã„ã§ä¸‹ã•ã„ã€‚
+SELECT UM_SCODE, SHOHIN_M.S_NAME, SUM(UM_SU)
+FROM URIAGE_M
 INNER JOIN SHOHIN_M
 ON URIAGE_M.UM_SCODE = SHOHIN_M.S_CODE
-group by UM_SCODE, SHOHIN_M.S_NAME
-order by S_NAME
+GROUP BY UM_SCODE, SHOHIN_M.S_NAME
+ORDER BY S_NAME
 ;
 
---‰‰K‚Q‚O
---”„ã–¾×‚Æ¤•iƒ}ƒXƒ^‚©‚ç¤•iƒR[ƒh–ˆ‚É¤•iƒR[ƒhA¤•i–¼, ”„ã”—Ê‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
---‚½‚¾‚µA”„ã–¾×‚É‚È‚¢¤•i‚É‚Â‚¢‚Ä‚à¤•iƒR[ƒhA¤•i–¼‚ð•\Ž¦‚µ‚Ä‰º‚³‚¢B
-select S_CODE, SHOHIN_M.S_NAME, SUM(UM_SU)
-from SHOHIN_M
-LEFT JOIN URIAGE_M
+--æ¼”ç¿’ï¼’ï¼
+--å£²ä¸Šæ˜Žç´°ã¨å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰å•†å“ã‚³ãƒ¼ãƒ‰æ¯Žã«å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“å, å£²ä¸Šæ•°é‡ã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
+--ãŸã ã—ã€å£²ä¸Šæ˜Žç´°ã«ãªã„å•†å“ã«ã¤ã„ã¦ã‚‚å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“åã‚’è¡¨ç¤ºã—ã¦ä¸‹ã•ã„ã€‚
+SELECT S_CODE, SHOHIN_M.S_NAME, SUM(UM_SU)
+FROM SHOHIN_M
+LEFT OUTER JOIN URIAGE_M
 ON URIAGE_M.UM_SCODE = SHOHIN_M.S_CODE
-group by S_CODE, SHOHIN_M.S_NAME
+GROUP BY S_CODE, SHOHIN_M.S_NAME
 ;
 
---‰‰K‚Q‚Pš
---”„ãƒwƒbƒ_[A”„ã–¾×A“¾ˆÓæƒ}ƒXƒ^A¤•iƒ}ƒXƒ^‚©‚ç
---”„ã”NŒŽ“ú‚ª‚P‚X‚X‚V”N‚Ì“¾ˆÓæƒR[ƒhA“¾ˆÓæ–¼A”„ã”NŒŽ“úA“`•[”Ô†A¤•iƒR[ƒhA¤•i–¼A”„ã‹àŠz‚ð
---“¾ˆÓæƒR[ƒh¸‡ŒŸõ 
---‚½‚¾‚µAŽÀÑ‚ª‚È‚¢“¾ˆÓæA¤•i‚Í•\Ž¦‚µ‚È‚¢
-
+--æ¼”ç¿’ï¼’ï¼‘â˜…
+--å£²ä¸Šãƒ˜ãƒƒãƒ€ãƒ¼ã€å£²ä¸Šæ˜Žç´°ã€å¾—æ„å…ˆãƒžã‚¹ã‚¿ã€å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰
+--å£²ä¸Šå¹´æœˆæ—¥ãŒï¼‘ï¼™ï¼™ï¼—å¹´ã®å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰ã€å¾—æ„å…ˆåã€å£²ä¸Šå¹´æœˆæ—¥ã€ä¼ç¥¨ç•ªå·ã€å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“åã€å£²ä¸Šé‡‘é¡ã‚’
+--å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰æ˜‡é †æ¤œç´¢ 
+--ãŸã ã—ã€å®Ÿç¸¾ãŒãªã„å¾—æ„å…ˆã€å•†å“ã¯è¡¨ç¤ºã—ãªã„
 SELECT T_CODE, T_NAME, UH_DATE, UH_DENNO, S_CODE, S_NAME, UM_URITAN
 FROM URIAGE_H
-JOIN URIAGE_M
+INNER JOIN URIAGE_M
 ON URIAGE_H.UH_DENNO = URIAGE_M.UM_DENNO
-JOIN TOKUI_M
+INNER JOIN TOKUI_M
 ON TOKUI_M.T_CODE = URIAGE_H.UH_TCODE
-JOIN SHOHIN_M
+INNER JOIN SHOHIN_M
 ON URIAGE_M.UM_SCODE = SHOHIN_M.S_CODE
 WHERE URIAGE_H.UH_DATE between 19970000 and 19979999
 ORDER BY  T_CODE ASC
 ;
 
 
---‰‰K‚Q‚Q
---¤•iƒ}ƒXƒ^‚©‚ç
---‘S¤•i‚Ì•½‹Ï”„ã’P‰¿‚æ‚è‚‚¢
---¤•i‚Ì¤•iƒR[ƒhA¤•i–¼A”„ã’P‰¿‚ðŒŸõ
+--æ¼”ç¿’ï¼’ï¼’
+--å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰
+--å…¨å•†å“ã®å¹³å‡å£²ä¸Šå˜ä¾¡ã‚ˆã‚Šé«˜ã„
+--å•†å“ã®å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“åã€å£²ä¸Šå˜ä¾¡ã‚’æ¤œç´¢
 SELECT S_CODE, S_NAME, S_TANKA
 FROM SHOHIN_M
 WHERE S_TANKA > (
@@ -186,16 +181,16 @@ WHERE S_TANKA > (
 	FROM SHOHIN_M
 )
 
---‰‰K‚Q‚R
---¤•iƒ}ƒXƒ^‚©‚ç
---’P‰¿‚ª‚P”ÔˆÀ‚¢¤•i‚Æ‚P”Ô‚‚¢¤•i‚Ì¤•iƒR[ƒhA¤•i–¼A”„ã’P‰¿‚ðŒŸõ
+--æ¼”ç¿’ï¼’ï¼“
+--å•†å“ãƒžã‚¹ã‚¿ã‹ã‚‰
+--å˜ä¾¡ãŒï¼‘ç•ªå®‰ã„å•†å“ã¨ï¼‘ç•ªé«˜ã„å•†å“ã®å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“åã€å£²ä¸Šå˜ä¾¡ã‚’æ¤œç´¢
 SELECT S_CODE, S_NAME, S_TANKA
 FROM SHOHIN_M
 WHERE S_TANKA = (SELECT MIN(S_TANKA) FROM SHOHIN_M) OR S_TANKA = (SELECT MAX(S_TANKA) FROM SHOHIN_M)
 ;
 
---‰‰K‚Q‚Sš
---“¾ˆÓæƒR[ƒhu1001v‚É”Ì”„‚µ‚½¤•i–¼‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼’ï¼”â˜…
+--å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰ã€Œ1001ã€ã«è²©å£²ã—ãŸå•†å“åã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT S_NAME
 FROM TOKUI_M
 --WHERE T_CODE = 1001
@@ -203,76 +198,76 @@ INNER JOIN URIAGE_H
 ON T_CODE = UH_TCODE
 INNER JOIN URIAGE_M
 ON UH_DENNO = UM_DENNO
-JOIN SHOHIN_M
+LEFT OUTRE JOIN SHOHIN_M
 ON UM_SCODE = S_CODE
 GROUP BY S_NAME, T_CODE
 HAVING T_CODE = 1001
 ;
 
---‰‰K‚Q‚Tš
---¤•iƒR[ƒhu1001v‚ð”Ì”„‚µ‚½Ž–‚ª‚È‚¢“¾ˆÓæ–¼‚ðŒŸõ‚µ‚Ä‰º‚³‚¢B
---(”Ì”„‚µ‚½‚±‚Æ‚ª‚È‚¢“¾ˆÓæ‚Æ‚¢‚¤‚±‚Æ‚ÍEEEB
+--æ¼”ç¿’ï¼’ï¼•â˜…
+--å•†å“ã‚³ãƒ¼ãƒ‰ã€Œ1001ã€ã‚’è²©å£²ã—ãŸäº‹ãŒãªã„å¾—æ„å…ˆåã‚’æ¤œç´¢ã—ã¦ä¸‹ã•ã„ã€‚
+--(è²©å£²ã—ãŸã“ã¨ãŒãªã„å¾—æ„å…ˆã¨ã„ã†ã“ã¨ã¯ãƒ»ãƒ»ãƒ»ã€‚
 SELECT T_NAME
 FROM TOKUI_M
 WHERE T_CODE not in (
 	SELECT T_CODE
 	FROM URIAGE_H
-	JOIN TOKUI_M
+	LEFT OUTRE JOIN TOKUI_M
 	ON T_CODE = UH_TCODE
-	JOIN URIAGE_M
+	LEFT OUTRE JOIN URIAGE_M
 	ON UH_DENNO = UM_DENNO
 	WHERE UM_SCODE = 1001
 	GROUP BY T_CODE
 )
 ;
 
---‚QDƒf[ƒ^‚Ì’Ç‰Á
---‰‰K‚Q‚U
---¤•iƒ}ƒXƒ^‚ÉˆÈ‰º‚Ìƒf[ƒ^‚ð’Ç‰Á‚µ‚Ä‰º‚³‚¢B
+--ï¼’ï¼Žãƒ‡ãƒ¼ã‚¿ã®è¿½åŠ 
+--æ¼”ç¿’ï¼’ï¼–
+--å•†å“ãƒžã‚¹ã‚¿ã«ä»¥ä¸‹ã®ãƒ‡ãƒ¼ã‚¿ã‚’è¿½åŠ ã—ã¦ä¸‹ã•ã„ã€‚
 INSERT INTO SHOHIN_M
 (S_CODE, S_NAME, S_TANI, S_TANKA, S_GENTAN)
-VALUES (5, '‰ªŽR“', 'ŒÂ', 500, 400), (6, 'Ã‰ªƒ}ƒXƒJƒbƒg', '” ', 2200, 1700)
+VALUES (5, 'å²¡å±±æ¡ƒ', 'å€‹', 500, 400), (6, 'é™å²¡ãƒžã‚¹ã‚«ãƒƒãƒˆ', 'ç®±', 2200, 1700)
 ;
 SELECT *
 FROM SHOHIN_M
 ;
 
---‰‰K‚Q‚V
---¤•iƒ}ƒXƒ^[ã‚Ìu¤•iƒR[ƒh5001v‚Ì¤•iƒR[ƒhA¤•i–¼‚ð¤•iƒ[ƒN‚É’Ç‰Á‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼’ï¼—
+--å•†å“ãƒžã‚¹ã‚¿ãƒ¼ä¸Šã®ã€Œå•†å“ã‚³ãƒ¼ãƒ‰ï¼5001ã€ã®å•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“åã‚’å•†å“ãƒ¯ãƒ¼ã‚¯ã«è¿½åŠ ã—ã¦ä¸‹ã•ã„ã€‚
 INSERT INTO SHOHIN_W
 (S_CODE, S_NAME)
-VALUES (5001, 'ƒ}ƒXƒJƒbƒgˆ¹')
+VALUES (5001, 'ãƒžã‚¹ã‚«ãƒƒãƒˆé£´')
 ;
 SELECT * FROM SHOHIN_W;
 
---‰‰K‚Q‚W
---“¾ˆÓæƒR[ƒhu1001v‚É”Ì”„‚µ‚½¤•iƒR[ƒhA¤•i–¼‚ð¤•iƒ[ƒN‚É’Ç‰Á‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼’ï¼˜
+--å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰ã€Œ1001ã€ã«è²©å£²ã—ãŸå•†å“ã‚³ãƒ¼ãƒ‰ã€å•†å“åã‚’å•†å“ãƒ¯ãƒ¼ã‚¯ã«è¿½åŠ ã—ã¦ä¸‹ã•ã„ã€‚
 INSERT INTO SHOHIN_W
 (S_CODE, S_NAME)
 SELECT S_CODE, S_NAME
 FROM SHOHIN_M
-JOIN URIAGE_M
+LEFT OUTRE JOIN URIAGE_M
 ON UM_SCODE = S_CODE
-JOIN URIAGE_H
+LEFT OUTRE JOIN URIAGE_H
 ON UM_DENNO = UH_DENNO
-JOIN TOKUI_M
+LEFT OUTRE JOIN TOKUI_M
 ON UH_TCODE = T_CODE
 WHERE T_CODE = 1001
 GROUP BY S_CODE, S_NAME
 ;
 SELECT * FROM SHOHIN_W;
 
---‚RDƒf[ƒ^‚Ì•ÏX
---‰‰K‚Q‚X
---“¾ˆÓæƒ}ƒXƒ^‚Ìƒf[ƒ^‚ðˆÈ‰º‚Ìƒf[ƒ^‚É•ÏX‚µ‚Ä‰º‚³‚¢Bi•ÏX‰ÓŠ‚Í–ÔŠ|‚¯•”•ªj
+--ï¼“ï¼Žãƒ‡ãƒ¼ã‚¿ã®å¤‰æ›´
+--æ¼”ç¿’ï¼’ï¼™
+--å¾—æ„å…ˆãƒžã‚¹ã‚¿ã®ãƒ‡ãƒ¼ã‚¿ã‚’ä»¥ä¸‹ã®ãƒ‡ãƒ¼ã‚¿ã«å¤‰æ›´ã—ã¦ä¸‹ã•ã„ã€‚ï¼ˆå¤‰æ›´ç®‡æ‰€ã¯ç¶²æŽ›ã‘éƒ¨åˆ†ï¼‰
 UPDATE TOKUI_M
 SET T_TEL = '03-5125-2552'
 WHERE T_CODE = 1001
 ;
 UPDATE TOKUI_M
 SET 
-	T_NAME = 'Š”Ž®‰ïŽÐãB‰®',
-	T_ADD2 = '‘æ7ƒrƒ‹1ŠK'
+	T_NAME = 'æ ªå¼ä¼šç¤¾ä¸Šå·žå±‹',
+	T_ADD2 = 'ç¬¬7ãƒ“ãƒ«1éšŽ'
 WHERE T_CODE = 1002
 ;
 SELECT *
@@ -280,8 +275,8 @@ FROM TOKUI_M
 WHERE T_CODE = 1001 OR T_CODE = 1002
 ;
 
---‰‰K‚R‚O
---”„ãƒwƒbƒ_[‚Ì”„ã”NŒŽ“ú‚ªu‚P‚X‚X‚V”N‚SŒŽ‚P“úvˆÈ~‚Ì“`•[‚É‚Â‚¢‚ÄA”„ã‡Œv~0.05‚ÉÁ”ïÅ‚ð•ÏX‚µ‚Ä‰º‚³‚¢B
+--æ¼”ç¿’ï¼“ï¼
+--å£²ä¸Šãƒ˜ãƒƒãƒ€ãƒ¼ã®å£²ä¸Šå¹´æœˆæ—¥ãŒã€Œï¼‘ï¼™ï¼™ï¼—å¹´ï¼”æœˆï¼‘æ—¥ã€ä»¥é™ã®ä¼ç¥¨ã«ã¤ã„ã¦ã€å£²ä¸Šåˆè¨ˆÃ—0.05ã«æ¶ˆè²»ç¨Žã‚’å¤‰æ›´ã—ã¦ä¸‹ã•ã„ã€‚
 SELECT *
 FROM URIAGE_H 
 WHERE UH_DATE > 19970401
@@ -295,9 +290,9 @@ FROM URIAGE_H
 WHERE UH_DATE > 19970401
 ;
 
---‚SDƒf[ƒ^‚Ìíœ
---‰‰K‚R‚P
---¤•iƒ}ƒXƒ^‚ÌˆÈ‰º‚Ìƒf[ƒ^‚ðíœ‚µ‚Ä‰º‚³‚¢B
+--ï¼”ï¼Žãƒ‡ãƒ¼ã‚¿ã®å‰Šé™¤
+--æ¼”ç¿’ï¼“ï¼‘
+--å•†å“ãƒžã‚¹ã‚¿ã®ä»¥ä¸‹ã®ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤ã—ã¦ä¸‹ã•ã„ã€‚
 DELETE FROM SHOHIN_M
 WHERE S_CODE = 5 OR S_CODE = 6
 ;
@@ -305,18 +300,18 @@ SELECT *
 FROM SHOHIN_M
 ;
 
---‰‰K‚R‚Q
---¤•iƒ[ƒN‚©‚ç“¾ˆÓæƒR[ƒhu1001v‚É”Ì”„‚µ‚½¤•i‚ðíœ‚µ‚Ä‰º‚³‚¢B
---i¤•iƒ}ƒXƒ^‚Å‚Í‚È‚­¤•iƒ[ƒN‚Å‚·BŠÔˆá‚¦‚È‚¢‚Å‰º‚³‚¢j
+--æ¼”ç¿’ï¼“ï¼’
+--å•†å“ãƒ¯ãƒ¼ã‚¯ã‹ã‚‰å¾—æ„å…ˆã‚³ãƒ¼ãƒ‰ã€Œ1001ã€ã«è²©å£²ã—ãŸå•†å“ã‚’å‰Šé™¤ã—ã¦ä¸‹ã•ã„ã€‚
+--ï¼ˆå•†å“ãƒžã‚¹ã‚¿ã§ã¯ãªãå•†å“ãƒ¯ãƒ¼ã‚¯ã§ã™ã€‚é–“é•ãˆãªã„ã§ä¸‹ã•ã„ï¼‰
 DELETE FROM SHOHIN_W
 WHERE S_CODE IN (
 SELECT S_CODE--, S_NAME
 	FROM SHOHIN_M
-	JOIN URIAGE_M
+	INNER JOIN URIAGE_M
 	ON UM_SCODE = S_CODE
-	JOIN URIAGE_H
+	INNER JOIN URIAGE_H
 	ON UM_DENNO = UH_DENNO
-	JOIN TOKUI_M
+	INNER JOIN TOKUI_M
 	ON UH_TCODE = T_CODE
 	WHERE T_CODE = 1001
 	GROUP BY S_CODE, S_NAME
