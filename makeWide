@@ -1,0 +1,8 @@
+const dls = document.getElementsByTagName('dl');
+const dds = document.getElementsByTagName('dd');
+for (let i = 0; i < dls.length; i++) {
+    var dl = dls[i];
+    var dd = dds[i];
+    dd.style.width = 'calc(95% - 90px)';
+    dl.style.width = 'calc(100% - 6px)';
+}
